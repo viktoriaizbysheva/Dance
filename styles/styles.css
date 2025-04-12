@@ -1,0 +1,46 @@
+/* Цвет фона */
+body {
+    background-color: #ce747435;
+}
+
+/* Логотип */
+.logo img {
+    text-align: center; 
+    max-width: 200px; 
+    height: auto;
+}
+/* Расположение блоков вокруг логотипа */
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh; 
+    margin: 0; 
+}
+.left-blocks, .right-blocks {
+    display: flex; 
+    transform: translateY(120%);
+    flex-direction: row;
+}
+
+html{height:100%; font-family: 'Roboto Condensed';} /*Семейство шрифтов */
+
+body{min-height:100%;} /* Мин. высота */                                            
+
+*{ margin:0; padding:0; } /* Сброс */
+
+body{ text-align:center; padding:20px 0; } /* Выравнивание */
+  
+/* Редактор шрифта */
+ul{ background-color:rgba(0, 0, 0, 0.296); border-bottom:1px solid rgba(255,255,255,0.25); box-shadow:0 0 8px rgba(0,0,0,0.4) inset; border-radius:16px; margin:0; padding:0 30px; }
+ul{ display:inline-block; text-align:center; height:50px; overflow:hidden; }
+ul li a 
+{ letter-spacing: 1px; text-decoration: none; text-transform: uppercase; color: #FFF; margin-top: -50px; transition: 0.3s cubic-bezier(0.1, 0.1, 0.5, 1.4); font-weight: bold; }
+ul li
+{ float:left; height:100%; list-style:none; margin:0 30px; }
+
+ul li *{ display:inline-block; font-size:1.3em; line-height:50px; }
+ul li a{ margin-top:-50px; transition:0.3s cubic-bezier(0.1, 0.1, 0.5, 1.4); }
+
+/* Анимация */
+ul li a:hover{ margin-top:0; }
+ul li a:before{ content:attr(data-text); display:block; color:#312b2b; }
