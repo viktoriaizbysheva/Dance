@@ -1,0 +1,178 @@
+body { /* Основной шрифт */
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  color: #2E3B59;
+  background-color: #DCE3E6;
+  margin: 0;
+}
+
+.wrap { /* Размер меню */
+  margin: 0 auto;
+  width: 70%;
+}
+
+.header { /* Выравнивание меню */
+  display: flex; /* Выравнивания элементов */
+  justify-content: space-between; /* Размещаем по краям */
+  align-items: center; /* Центрируем элементы по вертикали */
+  padding: 0 0;
+}
+
+.logo { /* Выранивание логотипа в меню */
+  flex: 1; /* Пространство слева */
+  text-align: left; /* Логотип по левому краю */
+}
+
+.logo img { /* Выранивание логотипа в меню */
+  max-width: 100px; /* Ограничиваем ширину логотипа */
+  height: auto; /* Сохраняем пропорции */
+  margin-right: 20px; /* Отступ справа от логотипа */
+}
+
+.nav { /* Выравнивание меню*/
+  flex: 1; /* Пространство справа */
+  text-align: right; /* Меню по правому краю */
+}
+
+.nav > ul {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем отступы */
+}
+
+
+.nav > ul > li { /* Выравнивание блоков в меню*/
+  display: inline-block; /* Размещаем элементы в строку */
+  margin-left: 10px; /* Отступ слева между элементами меню */
+}
+
+.nav > ul > li:first-child { /* Выравнивание блоков в меню*/
+  margin-left: 0; /* Убираем отступ слева у первого элемента меню */
+}
+
+.nav > ul > li > a { /* Изначальное поведение текста */
+  display: block;
+  font-weight: 500;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  color: #2E3B59;
+  transition: background 0.9s, color 0.9s;
+}
+
+.nav > ul > li > a:hover { /* Анимация принаведении */
+  color: #fff;
+  background: #395270;
+}
+
+/* СМЕНА СТРАНИЦЫ */
+
+.osn {/* Изображение только на одну секцию */
+  background: url(../image/p1.png) no-repeat center center;
+  background-size: contain;
+  padding: 0; 
+  margin: 0; 
+  position: relative;
+  z-index: 1; 
+  height: 100vh; 
+}
+
+._text { /* Текст на изображении */
+  padding: 20% 0%;
+}
+
+._text h2 { /* Текст на изображении (заголовок)*/
+  color: #fff;
+  font-size: 4em;
+  font-weight: 550;
+  z-index: 10;
+  text-align: center;
+  position: relative;
+  margin-top: -160px;
+  }
+
+  ._text p { /* Текст на изображении (основной)*/
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    margin: 1em auto;
+    width: 80%;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+._text .da-butt { /* Кнопка */
+  display: block;
+  background-color: #DCE3E6;
+  color: #2E3B59;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+  padding: 1em 2em;
+}
+.da-butt { /* Позиция кнопки */
+  position: absolute; /* абсолютное позиционирование кнопки */
+  left: 35%; 
+  top: 75%;  /* отступы от краев браузера */
+}
+
+._text .da-butt:hover{ /* Кнопка при наведении (смена цвета) */
+  background: #fff;
+}
+
+/* СМЕНА СТРАНИЦЫ */
+
+.about{ /* Текст */
+  color:#395270;
+  background-color: #DCE3E6; /* фон секции "Обо мне"  */
+  text-align:center; /* позиционирование текста */
+ }
+
+  .wrap_about{ /* Положение блоков на странице */
+  width: 90%; /* занимаемая ширина блоков по отношению к браузеру */
+  margin: 0 auto; /* расположение секций по центру */
+ }
+
+.about h2{ /* Текст (заголовок)*/
+    font-size:2.5em;
+    padding-bottom: 0.5em; /* отступ снизу для заголовка */
+ }
+.about p{ /* Текст (основной)*/
+  font-size:1.5em;
+  padding-bottom: 1.5em; /* отступ снизу для параграфа */
+ }
+
+.grid{ /* Настройка блоков */
+  width: 30%; /* ширина белого блока */
+  float: left; /* выстраивание в ряд трех белых блоков */
+  border-radius: 10%;
+  background-color: #fff; /* цвет блока */
+  margin: 0 1.5% 0 1.5%; /* отступы для белых блоков */
+  height: 650px; /* фиксированная высота */
+  box-sizing: border-box; /* чтобы padding не влиял на ширину */
+  transition: transform 0.3s ease; /* плавный переход */
+}
+
+.grid  h3{ /* Цвет,размер и верхний отступ для заголовка белого блока */
+  color: #292828;
+  font-size: 2em;
+  margin-top: 15px;
+ }
+
+.grid  p { /* значения свойств для параграфа белого блока */
+  color: #444444;
+  font-size: 1.3em;
+  text-align: left;
+  padding: 1em 1em 2em 1em;
+  line-height: 1.9em;
+ }
+
+.grid:hover {
+  transform: scale(1.05); /* увеличение блока на 5% при наведении */
+  z-index: 10; /* чтобы блок был поверх соседних во время масштабирования */
+}
+.clear{clear:both;}
